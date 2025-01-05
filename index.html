@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>COA | Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">COA Portfolio</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0" >
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="Integrated-Course-Activity.html" class="nav-item nav-link">Integrated Course
+                            Activity</a>
+
+                        <!-- Dropdown for Processor Module Design -->
+                        <div class="nav-item dropdown">
+                            <a href="Processor-Module-Design.html" class="nav-link dropdown-toggle"
+                                id="processorDesignDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Processor Module Design
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="processorDesignDropdown">
+                                <li><a class="dropdown-item" href="8-bit-alu.html">N bit
+                                        Arithmetic and Logical Unit</a></li>
+                                <li><a class="dropdown-item" href="memory.html">Memory</a></li>
+                                <li><a class="dropdown-item" href="register-file.html">Register
+                                        file</a></li>
+                                <li><a class="dropdown-item" href="sfrd.html">Special
+                                        Function Register Design</a></li>
+                                <li><a class="dropdown-item" href="psw.html">Processor Status
+                                        Word</a></li>
+                            </ul>
+                        </div>
+
+                        <script>
+                            document.getElementById('processorDesignDropdown').addEventListener('click', function (e) {
+                                if (!e.target.closest('.dropdown-menu')) {
+                                    // Redirect to the main page if the link itself is clicked
+                                    window.location.href = this.href;
+                                }
+                            });
+
+                        </script>
+
+
+                        <!-- Dropdown for Processor Module Integration -->
+                        <div class="nav-item dropdown">
+                            <a href="Processor-Module-Integration.html" class="nav-link dropdown-toggle"
+                                id="processorIntegrationDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Processor Module Integration
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="processorIntegrationDropdown">
+                                <li><a class="dropdown-item"
+                                        href="addressing-mode.html">
+                                        Instruction format for different addressing modes
+                                    </a></li>
+                                <li><a class="dropdown-item"
+                                        href="life-cycle.html">
+                                        Instruction Life Cycle
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <script>
+                            document.getElementById('processorIntegrationDropdown').addEventListener('click', function (e) {
+                                if (!e.target.closest('.dropdown-menu')) {
+                                    // Redirect to the main page if the link itself is clicked
+                                    window.location.href = this.href;
+                                }
+                            });
+
+                        </script>
+                        <a href="Course-Project.html" class="nav-item nav-link">Course Project</a>
+                        
+
+                    </div>
+                </div>
+
+                <style>
+                    /* Change link color when active or hovered */
+                    .nav-item .nav-link.active,
+                    .nav-item .nav-link:focus,
+                    .nav-item .nav-link:hover {
+                        color: orange;
+                    }
+
+                    /* Change background of dropdown items on hover */
+                    .dropdown-item:hover {
+                        background-color: orange;
+                        color: black;
+                        /* Optional: change text color on hover */
+                    }
+                </style>
+                
+            </nav>
+
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5 align-items-center" style="margin-top: -120px;">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated slideInDown">Computer Organization and Architecture</h1>
+                            <!-- <p class="text-white pb-3 animated slideInDown">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p> -->
+                            <!-- <a href="#" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
+                            <a href="#" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a> -->
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <iframe
+                                src="https://lottie.host/embed/1488810c-f17e-46a9-b366-c7e6b0e804ef/qoDsS2QpM3.lottie"
+                                class="img-fluid animated zoomIn"
+                                style="max-width: 100%; width: 100%; height: 400px;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/suprit.png" class="img-fluid rounded-start" alt="Profile Image" style="padding: 30px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body d-flex flex-column justify-content-center" style="padding: 35px; margin-top: 50px;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00;font-size: 30px;">Student Portfolio :</h5>
+                            <p class="card-text" style="color: #f8f9fa;">
+                                <ul >
+                                    <li style="margin: 10px;font-size: 22px;"><span class="fw-bold">USN:</span> 01fe24bcs415</li>
+                                    <li style="margin: 10px;font-size: 22px;"><span class="fw-bold">Name:</span> Supritkumar R Pagalapur</li>
+                                    <li style="margin: 10px;font-size: 22px;"><span class="fw-bold">Branch:</span> Computer Science And Engineering</li>
+                                    <li style="margin: 10px;font-size: 22px;"><span class="fw-bold">Division:</span> D Division</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        
+        
+        
+        
+
+        <!-- Feature Start -->
+         
+        <div class="container-xxl py-5">
+            <h2 style="text-align: center;">Technical Skills</h2>
+            <div class="container py-5 px-lg-5">
+                <div class="row g-4">
+                    
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+                            <h5 class="mb-3">C/C++</h5>
+                            <p class="m-0">C/C++ are powerful, high-performance programming languages commonly used for system programming, software development, and creating applications that require efficient memory management and low-level hardware interaction.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-search text-primary mb-4"></i>
+                            <h5 class="mb-3">Java</h5>
+                            <p class="m-0">Java is a versatile, object-oriented programming language known for its platform independence, enabling developers to write code that runs on any device with a Java Virtual Machine (JVM).</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
+                            <h5 class="mb-3">Web Development</h5>
+                            <p class="m-0">Web development is the process of building and maintaining websites and web applications, involving both front-end (client-side) and back-end (server-side) technologies to create interactive, responsive, and dynamic user experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+        <!-- course -->
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <iframe src="https://lottie.host/embed/27a04511-5e84-45dc-8c23-20ae1bafa438/kiwJvSMj4G.lottie" class="img-fluid rounded-start" alt="Course Image" style="width: 100%; height: 300px;"></iframe>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body d-flex flex-column justify-content-center" style="padding: 35px; margin-top: 50px;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00;font-size: 30px;"> Computer Organization and Architecture</h5>
+                            <p class="card-text" style="color: #f8f9fa;">
+                                <ul >
+                                    <li style="margin: 10px;font-size: 22px;"><span class="fw-bold">Course code :</span> 24ECSC201</li>
+                                    <li style="margin: 10px;font-size: 22px;"><span class="fw-bold">Course Instructor :</span> Ms. Aruna S Nayak</li>
+                                    <li style="margin: 10px;font-size: 22px;"><span class="fw-bold">Credits :</span> 4</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        <!-- end -->
+
+        <!--  -->
+        <div class="container d-flex justify-content-center mt-5" >
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                <div class="card-body" style="border: 2px solid yellow;">
+                    <h1 class="text-center" style="font-size: 36px; margin: 30px;color: blue;">Course Introduction</h1>
+                    <p style="text-align: justify; font-size: 18px; padding: 20px;">
+                        The Computer Organization & Architecture course covers the core principles of computer systems, including memory hierarchy, input/output mechanisms, interrupts, pipelining and the basics of parallel processing.
+                        <br><br>
+                        It thoroughly explains how modern computer systems operate and interconnect at both hardware and software levels. This course equips future engineers with the skills to design efficient, scalable, and robust computing systems by bridging the gap between hardware and software.
+                        <br><br>
+                        A key component of the course is a hands-on activity where students design a simple processor using a simulation tool, providing them with valuable insights into the instruction lifecycle and the internal workings of processors.
+                        <br><br>
+                        The course fosters a deep connection with the computer as both a machine and a system, offering insights from its lowest-level operations to its higher-level abstractions. Students are encouraged to think critically about the trade-offs and challenges faced in system design.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+        
+        <!--  -->
+
+        <!--  -->
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body" style="padding: 35px;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 30px; margin-bottom: 20px;">Course Outcomes (COs):</h5>
+                            <p class="card-text" style="color: #f8f9fa;">
+                                <ul style="list-style-type:disc ; padding-left: 0;">
+                                    <li style="margin: 15px 0; font-size: 22px;">Acquire basic knowledge in computer fundamentals, performance analysis and interconnection principles in modern computing.</li>
+                                    <li style="margin: 15px 0; font-size: 22px;">Build memory modules to perform I/O operations.</li>
+                                    <li style="margin: 15px 0; font-size: 22px;">Apply Instruction Set Architecture principles to effectively design and implement data path in computer systems.</li>
+                                    <li style="margin: 15px 0; font-size: 22px;">Explain the concept of parallelism with reference to computer performance.</li>
+                                    <li style="margin: 15px 0; font-size: 22px;">Integrate and simulate all modules to develop a complete processor, followed by a comprehensive performance analysis.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+        
+        
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        <!-- end -->
+
+        
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>KLE Technological University, Vidynagar, Hubli</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+91 93534 10837</p>
+                        <p><i class="fa fa-envelope me-3"></i>supritkumar9353@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=" https://x.com/Supritkumar_rp?t=C6xZJHXZNUiV_D69Yci_Og&s=08 "><i class="fab fa-twitter"></i></a>
+                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a> -->
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/supritkumar_rp/profilecard/?igsh=MTN3ODQzajk5OW5pdg=="><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/supritkumar-rp/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                        <a class="btn btn-link" href="index.html">Home</a>
+                        <a class="btn btn-link" href="Integrated-Course-Activity.html">Integrated-Course-Activity</a>
+                        <a class="btn btn-link" href="Processor-Module-Design.html">Processor-Module-Design</a>
+                        <a class="btn btn-link" href="Processor-Module-Integration.html">Processor-Module-Integration</a>
+                        
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Sub Link<span></span></p>
+                        <a class="btn btn-link" href="8-bit-alu.html">N bit Arithmetic and Logical Unit</a>
+                        <a class="btn btn-link" href="memory.html">Memory</a>
+                        <a class="btn btn-link" href="register-file.html">Register file</a>
+                        <a class="btn btn-link" href="sfrd.html">Special Function Register Design</a>
+                        <a class="btn btn-link" href="psw.html">Processor Status Word</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Sub Link<span></span></p>
+                        <a class="btn btn-link" href="addressing-mode.html">Instruction format for different addressing modes</a>
+                        <a class="btn btn-link" href="life-cycle.html">Instruction Life Cycle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Computer Organization And Architecture</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Developed By <a class="border-bottom" href="https://www.linkedin.com/in/supritkumar-rp/">Supritkumar</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

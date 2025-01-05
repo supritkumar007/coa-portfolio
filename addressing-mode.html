@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>COA | Addressing Modes</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">COA Portfolio</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0" >
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="Integrated-Course-Activity.html" class="nav-item nav-link">Integrated Course
+                            Activity</a>
+
+                        <!-- Dropdown for Processor Module Design -->
+                        <div class="nav-item dropdown">
+                            <a href="Processor-Module-Design.html" class="nav-link dropdown-toggle "
+                                id="processorDesignDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Processor Module Design
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="processorDesignDropdown">
+                                <li><a class="dropdown-item " href="8-bit-alu.html">N bit
+                                        Arithmetic and Logical Unit</a></li>
+                                <li><a class="dropdown-item" href="memory.html">Memory</a></li>
+                                <li><a class="dropdown-item" href="register-file.html">Register
+                                        file</a></li>
+                                <li><a class="dropdown-item" href="sfrd.html">Special
+                                        Function Register Design</a></li>
+                                <li><a class="dropdown-item" href="psw.html">Processor Status
+                                        Word</a></li>
+                            </ul>
+                        </div>
+
+                        <script>
+                            document.getElementById('processorDesignDropdown').addEventListener('click', function (e) {
+                                if (!e.target.closest('.dropdown-menu')) {
+                                    // Redirect to the main page if the link itself is clicked
+                                    window.location.href = this.href;
+                                }
+                            });
+
+                        </script>
+
+
+                        <!-- Dropdown for Processor Module Integration -->
+                        <div class="nav-item dropdown">
+                            <a href="Processor-Module-Integration.html" class="nav-link dropdown-toggle active"
+                                id="processorIntegrationDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Processor Module Integration
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="processorIntegrationDropdown">
+                                <li><a class="dropdown-item active"
+                                        href="addressing-mode.html">
+                                        Instruction format for different addressing modes
+                                    </a></li>
+                                <li><a class="dropdown-item"
+                                        href="life-cycle.html">
+                                        Instruction Life Cycle
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <script>
+                            document.getElementById('processorIntegrationDropdown').addEventListener('click', function (e) {
+                                if (!e.target.closest('.dropdown-menu')) {
+                                    // Redirect to the main page if the link itself is clicked
+                                    window.location.href = this.href;
+                                }
+                            });
+
+                        </script>
+                        <a href="Course-Project.html" class="nav-item nav-link">Course Project</a>
+                        
+
+                    </div>
+                </div>
+
+                <style>
+                    /* Change link color when active or hovered */
+                    .nav-item .nav-link.active,
+                    .nav-item .nav-link:focus,
+                    .nav-item .nav-link:hover {
+                        color: orange;
+                    }
+
+                    /* Change background of dropdown items on hover */
+                    .dropdown-item:hover {
+                        background-color: orange;
+                        color: black;
+                        /* Optional: change text color on hover */
+                    }
+                </style>
+                
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated slideInDown">Instruction Format for different addressing modes</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <!-- <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                                    <li class="breadcrumb-item text-white active" aria-current="page">Service</li>
+                                </ol>
+                            </nav> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!--  -->
+
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <iframe src="https://lottie.host/embed/9071bdcd-a06e-459f-94aa-01861a7d882b/EOdFUwiqua.lottie"
+                            class="img-fluid rounded-start" alt="Course Image"
+                            style="width: 100%; height: 200px;margin-top: 30px;"></iframe>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body d-flex flex-column justify-content-center"
+                            style="padding: 35px; margin-top: 10px;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00;font-size: 30px;">DESCRIPTION:</h5><br>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;">
+                                Understand instruction formats for different addressing modes and implement an instruction lifecycle.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;">
+                                An instruction format in computer organization defines the layout of bits in an instruction, specifying the operation to be performed and the operands involved. The format depends on the addressing mode used, as different modes determine how the operand's address or value is specified in the instruction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+
+        <!--  -->
+        
+        <!--  -->
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body d-flex flex-column justify-content-center" style="padding: 35px; margin-top: 10px;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00;font-size: 30px;">Common Components of Instruction Format:</h5><br>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>Opcode:</b> Specifies the operation to be performed (e.g., ADD, SUB, MOV).
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>Operands:</b> Indicate the data or memory locations involved.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>Mode Specifier:</b> Determines the addressing mode for accessing operands.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>Address Field:</b> Contains memory address, register identifier, or immediate value.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+        
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        
+        <!--  -->
+
+        <!--  -->
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body d-flex flex-column justify-content-center" style="padding: 35px; margin-top: 10px;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00;font-size: 30px;">Instruction Formats for Different Addressing Modes:</h5><br>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>1. Immediate Addressing Mode:</b><br>
+                                <b>Format:</b> Opcode | Immediate Value<br>
+                                The operand value is directly encoded in the instruction.<br>
+                                <b>Example:</b> ADD #5<br>
+                                Adds the immediate value 5 to the accumulator.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>2. Direct Addressing Mode:</b><br>
+                                <b>Format:</b> Opcode | Memory Address<br>
+                                The address field contains the memory location of the operand.<br>
+                                <b>Example:</b> LOAD 1000<br>
+                                Loads the value from memory address 1000.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>3. Indirect Addressing Mode:</b><br>
+                                <b>Format:</b> Opcode | Pointer Address<br>
+                                The address field contains the location of a pointer, which in turn holds the address of the operand.<br>
+                                <b>Example:</b> LOAD (500)<br>
+                                Fetches the operand from the memory address stored at address 500.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>4. Register Addressing Mode:</b><br>
+                                <b>Format:</b> Opcode | Register<br>
+                                The operand is located in a register.<br>
+                                <b>Example:</b> ADD R1<br>
+                                Adds the value in register R1 to the accumulator.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>5. Register Indirect Addressing Mode:</b><br>
+                                <b>Format:</b> Opcode | Register<br>
+                                The register contains the address of the operand in memory.<br>
+                                <b>Example:</b> LOAD (R2)<br>
+                                Loads the value from the memory address stored in register R2.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>6. Indexed Addressing Mode:</b><br>
+                                <b>Format:</b> Opcode | Base Address | Index Register<br>
+                                Combines a base address and an offset stored in an index register to compute the effective address.<br>
+                                <b>Example:</b> LOAD 1000, R3<br>
+                                Loads data from address 1000 + R3.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>7. Relative Addressing Mode:</b><br>
+                                <b>Format:</b> Opcode | Offset<br>
+                                The effective address is calculated by adding the offset to the current program counter (PC).<br>
+                                <b>Example:</b> JUMP +4<br>
+                                Jumps to the instruction located 4 positions ahead of the current PC.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>8. Stack Addressing Mode:</b><br>
+                                <b>Format:</b> Opcode<br>
+                                Operands are implicitly taken from or pushed to the stack (LIFO structure).<br>
+                                <b>Example:</b> PUSH<br>
+                                Pushes the accumulator value onto the stack.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+        
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        
+        
+        <!--  -->
+
+        <!--  -->
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body d-flex flex-column justify-content-center" style="padding: 35px; margin-top: 10px;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00;font-size: 30px;">Trade-offs in Instruction Formats:</h5><br>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>1. Instruction Size:</b><br>
+                                Larger formats can encode more information but require more memory.<br>
+                                Compact formats save space but may limit functionality.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>2. Execution Speed:</b><br>
+                                Immediate and register modes are faster as no memory access is required.<br>
+                                Indirect and indexed modes may involve multiple memory accesses.
+                            </p>
+                            <p class="card-text" style="color: #f8f9fa;font-size: 20px;text-align: justify;width: 900px;">
+                                <b>3. Flexibility:</b><br>
+                                Addressing modes like indirect and indexed provide more flexibility for complex data structures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+        
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        
+        
+
+        <!--  -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>KLE Technological University, Vidynagar, Hubli</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+91 93534 10837</p>
+                        <p><i class="fa fa-envelope me-3"></i>supritkumar9353@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=" https://x.com/Supritkumar_rp?t=C6xZJHXZNUiV_D69Yci_Og&s=08 "><i class="fab fa-twitter"></i></a>
+                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a> -->
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/supritkumar_rp/profilecard/?igsh=MTN3ODQzajk5OW5pdg=="><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/supritkumar-rp/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                        <a class="btn btn-link" href="index.html">Home</a>
+                        <a class="btn btn-link" href="Integrated-Course-Activity.html">Integrated-Course-Activity</a>
+                        <a class="btn btn-link" href="Processor-Module-Design.html">Processor-Module-Design</a>
+                        <a class="btn btn-link" href="Processor-Module-Integration.html">Processor-Module-Integration</a>
+                        
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Sub Link<span></span></p>
+                        <a class="btn btn-link" href="8-bit-alu.html">N bit Arithmetic and Logical Unit</a>
+                        <a class="btn btn-link" href="memory.html">Memory</a>
+                        <a class="btn btn-link" href="register-file.html">Register file</a>
+                        <a class="btn btn-link" href="sfrd.html">Special Function Register Design</a>
+                        <a class="btn btn-link" href="psw.html">Processor Status Word</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Sub Link<span></span></p>
+                        <a class="btn btn-link" href="addressing-mode.html">Instruction format for different addressing modes</a>
+                        <a class="btn btn-link" href="life-cycle.html">Instruction Life Cycle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Computer Organization And Architecture</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Developed By <a class="border-bottom" href="https://www.linkedin.com/in/supritkumar-rp/">Supritkumar</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

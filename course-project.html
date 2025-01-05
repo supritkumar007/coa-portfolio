@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>COA | Course-Project</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">COA Portfolio</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0" >
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="Integrated-Course-Activity.html" class="nav-item nav-link">Integrated Course
+                            Activity</a>
+
+                        <!-- Dropdown for Processor Module Design -->
+                        <div class="nav-item dropdown">
+                            <a href="Processor-Module-Design.html" class="nav-link dropdown-toggle"
+                                id="processorDesignDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Processor Module Design
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="processorDesignDropdown">
+                                <li><a class="dropdown-item" href="8-bit-alu.html">N bit
+                                        Arithmetic and Logical Unit</a></li>
+                                <li><a class="dropdown-item" href="memory.html">Memory</a></li>
+                                <li><a class="dropdown-item" href="register-file.html">Register
+                                        file</a></li>
+                                <li><a class="dropdown-item" href="sfrd.html">Special
+                                        Function Register Design</a></li>
+                                <li><a class="dropdown-item" href="psw.html">Processor Status
+                                        Word</a></li>
+                            </ul>
+                        </div>
+
+                        <script>
+                            document.getElementById('processorDesignDropdown').addEventListener('click', function (e) {
+                                if (!e.target.closest('.dropdown-menu')) {
+                                    // Redirect to the main page if the link itself is clicked
+                                    window.location.href = this.href;
+                                }
+                            });
+
+                        </script>
+
+
+                        <!-- Dropdown for Processor Module Integration -->
+                        <div class="nav-item dropdown">
+                            <a href="Processor-Module-Integration.html" class="nav-link dropdown-toggle"
+                                id="processorIntegrationDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Processor Module Integration
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="processorIntegrationDropdown">
+                                <li><a class="dropdown-item"
+                                        href="addressing-mode.html">
+                                        Instruction format for different addressing modes
+                                    </a></li>
+                                <li><a class="dropdown-item"
+                                        href="life-cycle.html">
+                                        Instruction Life Cycle
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <script>
+                            document.getElementById('processorIntegrationDropdown').addEventListener('click', function (e) {
+                                if (!e.target.closest('.dropdown-menu')) {
+                                    // Redirect to the main page if the link itself is clicked
+                                    window.location.href = this.href;
+                                }
+                            });
+
+                        </script>
+                        <a href="Course-Project.html" class="nav-item nav-link active">Course Project</a>
+                        
+
+                    </div>
+                </div>
+
+                <style>
+                    /* Change link color when active or hovered */
+                    .nav-item .nav-link.active,
+                    .nav-item .nav-link:focus,
+                    .nav-item .nav-link:hover {
+                        color: orange;
+                    }
+
+                    /* Change background of dropdown items on hover */
+                    .dropdown-item:hover {
+                        background-color: orange;
+                        color: black;
+                        /* Optional: change text color on hover */
+                    }
+                </style>
+                
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated slideInDown">Course Project</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <!-- <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                                    <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                                </ol>
+                            </nav> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+
+        <!--  -->
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                            style="padding: 35px; text-align: center;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">Problem Statement
+                            </h5>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;"><br>
+                            <p class="card-text" style="color: #f8f9fa; font-size: 24px;">
+                                Design an 8-bit processor with 3 address format and having Immediate addressing mode.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .card {
+                transition: all 0.3s ease;
+            }
+
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        <!--  -->
+
+        <!--  -->
+        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+            style="padding: 35px; text-align: center;">
+
+        </div>
+        <!--  -->
+        <!--  -->
+        <div class="container-xxl py-5">
+            <h5 class="card-title fw-bold" style="color: #3e11c6; font-size: 36px; text-align: center;">Processor
+                modules</h5>
+            <hr class="bg-black mx-auto mt-0" style="width: 90px;"><br>
+            <h6 style="color: #3e11c6;text-align: center;">for the below .circ files, open files only in Logisim</h6>
+            <div class="container py-5 px-lg-5 d-flex justify-content-center">
+                <div class="row g-4" style="width: 100%; max-width: 1200px;">
+                    <div class="col-lg-6 d-flex justify-content-center">
+                        <div class="feature-item bg-light rounded text-center p-4 d-flex flex-column justify-content-between"
+                            style="width: 100%; max-width: 500px; height: 100%; min-height: 600px;">
+                            <img src="img/Coa-processor-alu.gif" alt="ALU Animation" class="img-fluid rounded mb-auto"
+                                style="width: 100%; height: auto; max-height: 500px;">
+                            <h5 class="mb-3">
+                                <a href="path/to/Coa-Processor-ALU.circ" download="Coa-Processor-ALU.circ"
+                                    style="text-decoration: none;font-size:25px;">
+                                    Arithmetic and Logical Unit
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex justify-content-center">
+                        <div class="feature-item bg-light rounded text-center p-4 d-flex flex-column justify-content-between"
+                            style="width: 100%; max-width: 500px; height: 100%; min-height: 600px;">
+                            <img src="img/coa-processor-regbank.png" alt="Register Bank"
+                                class="img-fluid rounded mb-auto" style="width: 100%; height: auto; max-height: 500px;">
+                            <h5 class="mb-3">
+                                <a href="path/to/Coa-Processor-ALU.circ" download="coa-processor-regbank.circ"
+                                    style="text-decoration: none;font-size:25px;">
+                                    Register Bank
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex justify-content-center">
+                        <div class="feature-item bg-light rounded text-center p-4 d-flex flex-column justify-content-between"
+                            style="width: 100%; max-width: 500px; height: 100%; min-height: 600px;">
+                            <img src="img/coa-processor-pc.png" alt="Register Bank" class="img-fluid rounded mb-auto"
+                                style="width: 100%; height: auto; max-height: 500px;">
+                            <h5 class="mb-3">
+                                <a href="path/to/Coa-Processor-ALU.circ" download="coa-processor-pc.circ"
+                                    style="text-decoration: none;font-size:25px;">
+                                    Program Counter
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center">
+                        <div class="feature-item bg-light rounded text-center p-4 d-flex flex-column justify-content-between"
+                            style="width: 100%; max-width: 500px; height: 100%; min-height: 600px;">
+                            <img src="img/coa-processor-cu.png" alt="Register Bank" class="img-fluid rounded mb-auto"
+                                style="width: 100%; height: auto; max-height: 500px;">
+                            <h5 class="mb-3">
+                                <a href="path/to/Coa-Processor-ALU.circ" download="coa-processor-cu.circ"
+                                    style="text-decoration: none;font-size:25px;">
+                                    Control Unit
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .feature-item {
+                transition: all 0.3s ease;
+            }
+
+            .feature-item:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+        <!--  -->
+
+        <!--  -->
+
+        <h5 class="card-title fw-bold" style="color: #3e11c6; font-size: 36px; text-align: center;">Integrated processor
+        </h5>
+        <hr class="bg-black mx-auto mt-0" style="width: 90px;"><br>
+
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                            style="padding: 35px; text-align: center;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">Description about
+                                Processor</h5>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;"><br>
+                            <p class="card-text" style="color: #f8f9fa; font-size: 24px;">
+                                An 8-bit processor is a microprocessor that processes and transfers data in 8-bit
+                                chunks. It operates using an 8-bit data bus, making it efficient for small-scale
+                                operations like embedded systems and low-power devices.
+                            </p>
+                        </div>
+                        <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">The
+                            processor is designed with:</h5>
+                        <ol class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                            <li><strong>3-Address Format:</strong> Allows three operands in instructions (e.g.,
+                                destination, source1, source2). This improves performance by reducing intermediate
+                                steps.</li>
+                            <li><strong>Immediate Addressing Mode:</strong> Data is directly embedded within the
+                                instruction, reducing memory access time and enhancing execution speed.</li>
+                        </ol>
+                        <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
+                            Speciality: </h5>
+                        <ul class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                            <li>Efficient for arithmetic and logical operations due to the 8-bit data structure.</li>
+                            <li>Simplified instruction set for faster development and debugging.</li>
+                            <li>Ideal for low-power, high-performance tasks in devices like calculators, sensors, and
+                                small control systems.</li>
+                        </ul>
+                        <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">Features:
+                        </h5>
+                        <ol class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                            <li><strong>Compact Design:</strong> Suitable for space-constrained systems.</li>
+                            <li>Simplified instruction set for faster development and debugging.</li>
+                            <li><strong>Low Power Consumption:</strong> Ensures efficiency for battery-operated devices.
+                            </li>
+                        </ol>
+                        <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
+                            Advantages: </h5>
+                        <ul class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                            <li><strong>Speed:</strong> Faster operations with immediate data access.</li>
+                            <li><strong> Simplicity: </strong>Easier to program and debug due to straightforward
+                                architecture.</li>
+                            <li><strong> Cost-Effective: </strong>Less expensive to design and manufacture.</li>
+                            <li><strong>Portability:</strong> Lightweight and highly adaptable for various applications.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                            style="padding: 35px; text-align: center;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">Intruction State
+                                Diagram
+                            </h5>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;"><br>
+                            <p class="card-text" style="color: #f8f9fa; font-size: 24px;">
+                                <a href="img/coa-ILC.png"><img src="img/coa-ILC.png" alt="Intruction State Diagram"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                            style="padding: 35px; text-align: center;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">Microinstructions
+                            </h5>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;"><br>
+                            <p class="card-text" style="color: #f8f9fa; font-size: 24px;">
+                            <ul style="font-size: 20px;">
+                                <li>ADD R1,R2,#5 //R2 = A , R1 = 0</li>
+                                <li>SUB R3,R4,#3 //R4 = 8 , R3 = 0</li><br><br>
+                                <li>T1 : (MAR) -- (PC)</li>
+                                <li>T2 : MBR -- (MEMORY)
+                                    <br>
+                                    PC -- PC + I
+                                </li>
+                                <li>T3 : IR -- (MBR)</li>
+                                <li>T4 : R1 -- R2 + 5</li>
+                                <li>T5: (MAR) -- (PC)</li>
+                                <li>T6: MBR -- (MEMORY)</li>
+                                <li>T7: IR -- (MBR)</li>
+                                <li>T8: R3 -- R4 - 3</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                            style="padding: 35px; text-align: center;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">Designed Processor
+                            </h5>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;"><br>
+                            <p class="card-text" style="color: #f8f9fa; font-size: 24px;">
+                                <a href="img/coa-processor-full.png">
+                                    <img src="img/coa-processor-full.png" alt="Designed Processor"
+                                        style="width: 100%; height: auto;">
+                                </a>
+                            </p>
+                            <!-- Download Button -->
+                            <a href="path/to/your/processor-file.circ" download="coa-processor-full.circ"
+                                class="btn btn-warning mt-3" style="font-size: 18px;">
+                                Download Processor File
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+
+        <!--  -->
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                            style="padding: 35px; text-align: center;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">Activity learning
+                                and challenges
+                            </h5>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;"><br>
+                            <p class="card-text" style="color: #f8f9fa; font-size: 24px;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
+                                Activity Learnings: </h5>
+                            <ul class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                                <li>Designed an 8-bit processor using the 3-address format and Immediate addressing mode.</li>
+                                <li>Understood how the processor fetches and decodes instructions in a cycle.</li>
+                                <li>Gained insights into the steps involved in executing each instruction, such as fetching, decoding, and executing.</li>
+                                <li>Learned about different addressing modes, specifically how Immediate addressing allows using constant values directly in the instruction.</li>
+                            </ul>
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
+                                Challenges Faced: </h5>
+                            <ul class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                                <li>Handling different instruction formats and ensuring the proper handling of data across registers.</li>
+                                <li>Managing memory efficiently to store and retrieve data while executing instructions.</li>
+                                <li>Debugging issues related to the timing of instruction cycles and ensuring proper synchronization.</li>
+                                
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>KLE Technological University, Vidynagar, Hubli</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+91 93534 10837</p>
+                        <p><i class="fa fa-envelope me-3"></i>supritkumar9353@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social"
+                                href=" https://x.com/Supritkumar_rp?t=C6xZJHXZNUiV_D69Yci_Og&s=08 "><i
+                                    class="fab fa-twitter"></i></a>
+                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a> -->
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://www.instagram.com/supritkumar_rp/profilecard/?igsh=MTN3ODQzajk5OW5pdg=="><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://www.linkedin.com/in/supritkumar-rp/"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                        <a class="btn btn-link" href="index.html">Home</a>
+                        <a class="btn btn-link" href="Integrated-Course-Activity.html">Integrated-Course-Activity</a>
+                        <a class="btn btn-link" href="Processor-Module-Design.html">Processor-Module-Design</a>
+                        <a class="btn btn-link"
+                            href="Processor-Module-Integration.html">Processor-Module-Integration</a>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Sub Link<span></span></p>
+                        <a class="btn btn-link" href="8-bit-alu.html">N bit Arithmetic and Logical Unit</a>
+                        <a class="btn btn-link" href="memory.html">Memory</a>
+                        <a class="btn btn-link" href="register-file.html">Register file</a>
+                        <a class="btn btn-link" href="sfrd.html">Special Function Register Design</a>
+                        <a class="btn btn-link" href="psw.html">Processor Status Word</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Sub Link<span></span></p>
+                        <a class="btn btn-link" href="addressing-mode.html">Instruction format for different addressing
+                            modes</a>
+                        <a class="btn btn-link" href="life-cycle.html">Instruction Life Cycle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Computer Organization And Architecture</a>, All
+                            Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Developed By <a class="border-bottom"
+                                href="https://www.linkedin.com/in/supritkumar-rp/">Supritkumar</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
