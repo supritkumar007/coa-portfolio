@@ -56,7 +56,7 @@
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0" >
+                    <div class="navbar-nav mx-auto py-0">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="Integrated-Course-Activity.html" class="nav-item nav-link">Integrated Course
                             Activity</a>
@@ -100,12 +100,10 @@
                                 Processor Module Integration
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="processorIntegrationDropdown">
-                                <li><a class="dropdown-item"
-                                        href="addressing-mode.html">
+                                <li><a class="dropdown-item" href="addressing-mode.html">
                                         Instruction format for different addressing modes
                                     </a></li>
-                                <li><a class="dropdown-item"
-                                        href="life-cycle.html">
+                                <li><a class="dropdown-item" href="life-cycle.html">
                                         Instruction Life Cycle
                                     </a></li>
                             </ul>
@@ -120,7 +118,7 @@
 
                         </script>
                         <a href="course-project.html" class="nav-item nav-link active">Course Project</a>
-                        
+
 
                     </div>
                 </div>
@@ -140,7 +138,7 @@
                         /* Optional: change text color on hover */
                     }
                 </style>
-                
+
             </nav>
 
             <div class="container-xxl py-5 bg-primary hero-header">
@@ -209,7 +207,75 @@
             <h5 class="card-title fw-bold" style="color: #3e11c6; font-size: 36px; text-align: center;">Processor
                 modules</h5>
             <hr class="bg-black mx-auto mt-0" style="width: 90px;"><br>
-            <h6 style="color: #3e11c6;text-align: center;">for the below .circ files, open files only in Logisim</h6>
+            <!-- <h6 style="color: #3e11c6;text-align: center;">for the below .circ files, open files only in Logisim</h6> -->
+            <div class="container d-flex justify-content-center align-items-center mt-5">
+                <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">ALU:
+                            </h5>
+                            <p style="font-size: 20px;padding-left: 15px;">An Arithmetic Logic Unit (ALU) is a critical
+                                component of a processor that performs arithmetic and logical operations on data. It
+                                operates on binary numbers and acts as the computational brain of the CPU. The ALU takes
+                                input data, executes operations based on control signals, and provides the result as
+                                output.</p>
+                            <ol class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                                <h6 style="color: #f8f9fa; font-size: 25px;text-decoration: underline;">Key features of
+                                    an ALU include:</h6>
+                                <li><strong>Arithmetic Operations: </strong> Addition, subtraction, multiplication,
+                                    division, increment, and decrement.</li>
+                                <li><strong>Logical Operations:</strong> AND, OR, NOT, and similar bitwise functions.
+                                </li>
+                                <li><strong>Shift/Rotate Operations:</strong> Shifting or rotating bits to manipulate
+                                    data efficiently.</li>
+                            </ol>
+                            <p style="font-size: 20px;padding-left: 15px;">This specific ALU implements 13 operations:
+                                add, sub, mul, div, inc, dec, and, or, not, shr, shl, ror, and rol, making it versatile
+                                for performing arithmetic, logical, and bit manipulation tasks.</p>
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
+                                Register Bank: </h5>
+                            <p style="font-size: 20px;padding-left: 15px;">The register bank consists of <b>16 8-bit
+                                    registers (R0 to R15)</b>, used for temporarily storing data. A <b>decoder</b>
+                                selects a specific register for read or write operations based on control signals, while
+                                a <b>multiplexer (MUX)</b> routes the selected register's data to the output. The <b>R/W
+                                    control</b> determines whether data is written to or read from the registers, and
+                                the <b>accumulator</b> temporarily holds data for these operations. A <b>clock
+                                    signal</b> synchronizes all activities, ensuring efficient and fast data handling
+                                within the processor.</p>
+
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
+                                Program Counter:
+                            </h5>
+                            <p style="font-size: 20px;padding-left: 15px;">The program counter (PC) is an 8-bit register
+                                that stores the address of the next instruction to be executed. It can load a new
+                                address via PC_in, increment automatically to the next address on each clock pulse when
+                                PC_enable is active, and reset to a predefined address using the Reset signal. The
+                                PC_out provides the current address, while the clock ensures synchronized operation,
+                                enabling sequential instruction execution and manual updates when required. </p>
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
+                                Control Unit: </h5>
+                            <p style="font-size: 20px;padding-left: 15px;">The Control Unit (CU) is a component of a
+                                computer's processor that directs and coordinates all operations by generating control
+                                signals. It manages the flow of data between the CPU, memory, and input/output devices,
+                                ensuring that instructions are executed in the correct sequence and timing.</p>
+                            <ul class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                                <li><strong>PC_enable:</strong> Activates the Program Counter (PC) to send the address
+                                    of the next instruction to memory.</li>
+                                <li><strong> Mem_read: </strong>Signals the memory to read data or an instruction from
+                                    the specified address.</li>
+                                <li><strong> IR: </strong>Loads the fetched instruction into the Instruction Register
+                                    (IR) for decoding and execution.</li>
+                                <li><strong>Operand_fetch:</strong> Fetches the operands required for executing the
+                                    instruction (from memory or registers).</li>
+                                <li><strong>ALU:</strong> Activates the Arithmetic Logic Unit (ALU) to perform the
+                                    required arithmetic or logical operation.</li>
+                                <li><strong>R/W':</strong> Indicates whether the operation is a read ('1') or a write
+                                    ('0') in memory or a register.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container py-5 px-lg-5 d-flex justify-content-center">
                 <div class="row g-4" style="width: 100%; max-width: 1200px;">
                     <div class="col-lg-6 d-flex justify-content-center">
@@ -218,7 +284,7 @@
                             <img src="img/Coa-processor-alu.gif" alt="ALU Animation" class="img-fluid rounded mb-auto"
                                 style="width: 100%; height: auto; max-height: 500px;">
                             <h5 class="mb-3">
-                                <a href="https://raw.githubusercontent.com/supritkumar007/coa-portfolio/main/coa-processor.circ" download="Coa-Processor-ALU.circ"
+                                <a href="#" download="Coa-Processor-ALU.circ"
                                     style="text-decoration: none;font-size:25px;">
                                     Arithmetic and Logical Unit
                                 </a>
@@ -232,7 +298,7 @@
                             <img src="img/coa-processor-regbank.png" alt="Register Bank"
                                 class="img-fluid rounded mb-auto" style="width: 100%; height: auto; max-height: 500px;">
                             <h5 class="mb-3">
-                                <a href="https://github.com/supritkumar007/coa-portfolio/blob/main/Coa-Processor-Regbank.circ" download="Coa-Processor-Regbank.circ"
+                                <a href="#" download="Coa-Processor-Regbank.circ"
                                     style="text-decoration: none;font-size:25px;">
                                     Register Bank
                                 </a>
@@ -246,7 +312,7 @@
                             <img src="img/coa-processor-pc.png" alt="Register Bank" class="img-fluid rounded mb-auto"
                                 style="width: 100%; height: auto; max-height: 500px;">
                             <h5 class="mb-3">
-                                <a href="https://github.com/supritkumar007/coa-portfolio/blob/main/coa-processor-pc.circ" download="coa-processor-pc.circ"
+                                <a href="#" download="coa-processor-pc.circ"
                                     style="text-decoration: none;font-size:25px;">
                                     Program Counter
                                 </a>
@@ -259,7 +325,7 @@
                             <img src="img/coa-processor-cu.png" alt="Register Bank" class="img-fluid rounded mb-auto"
                                 style="width: 100%; height: auto; max-height: 500px;">
                             <h5 class="mb-3">
-                                <a href="https://github.com/supritkumar007/coa-portfolio/blob/main/coa-processor-cu.circ" download="coa-processor-cu.circ"
+                                <a href="#" download="coa-processor-cu.circ"
                                     style="text-decoration: none;font-size:25px;">
                                     Control Unit
                                 </a>
@@ -372,24 +438,32 @@
                     <div class="col-md-12">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center"
                             style="padding: 35px; text-align: center;">
-                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">Microinstructions
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">
+                                Microinstructions
                             </h5>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;"><br>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                             <p class="card-text" style="color: #f8f9fa; font-size: 24px;">
-                            <ul style="font-size: 20px;">
-                                <li>ADD R1,R2,#5 //R2 = A , R1 = 0</li>
-                                <li>SUB R3,R4,#3 //R4 = 8 , R3 = 0</li><br><br>
-                                <li>T1 : (MAR) -- (PC)</li>
-                                <li>T2 : MBR -- (MEMORY)
+                            <ul style="font-size: 20px; text-align: left; list-style-position: inside;">
+                                <li>ADD R1, R2, #5 // R2 = A, R1 = 0</li>
+                                <li>SUB R3, R4, #3 // R4 = 8, R3 = 0</li>
+                            </ul>
+                            <br>
+                            <ul style="font-size: 20px; text-align: left; list-style-position: inside;">
+                                <li>T1: (MAR) ← (PC)</li>
+                                <li>T2: MBR ← (MEMORY)
                                     <br>
-                                    PC -- PC + I
+                                    PC ← PC + I
                                 </li>
-                                <li>T3 : IR -- (MBR)</li>
-                                <li>T4 : R1 -- R2 + 5</li>
-                                <li>T5: (MAR) -- (PC)</li>
-                                <li>T6: MBR -- (MEMORY)</li>
-                                <li>T7: IR -- (MBR)</li>
-                                <li>T8: R3 -- R4 - 3</li>
+                                <li>T3: IR ← (MBR)</li>
+                                <li>T4: R1 ← R2 + 5</li>
+                                <li>T5: (MAR) ← (PC)</li>
+                                <li>T6: MBR ← (MEMORY)
+                                    <br>
+                                    PC ← PC + I
+                                </li>
+
+                                <li>T7: IR ← (MBR)</li>
+                                <li>T8: R3 ← R4 - 3</li>
                             </ul>
                             </p>
                         </div>
@@ -397,6 +471,7 @@
                 </div>
             </div>
         </div>
+
         <!--  -->
 
         <!--  -->
@@ -416,8 +491,8 @@
                                 </a>
                             </p>
                             <!-- Download Button -->
-                            <a href="https://raw.githubusercontent.com/supritkumar007/coa-portfolio/main/Coa-Processor.circ" download="Coa-Processor.circ"
-                                class="btn btn-warning mt-3" style="font-size: 18px;">
+                            <a href="#" download="Coa-Processor.circ" class="btn btn-warning mt-3"
+                                style="font-size: 18px;">
                                 Download Processor File
                             </a>
                         </div>
@@ -428,6 +503,93 @@
 
         <!--  -->
 
+        <!--  -->
+
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                            style="padding: 35px; text-align: center;">
+                            <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 36px;">Working of the
+                                Processor</h5>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;"><br>
+                        </div>
+                        <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">1. Fetch
+                            Phase:</h5>
+                        <ul class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
+                            <li><strong>Step 1: Program Counter (PC):</strong>
+                                <ul>
+                                    <li>The PC contains the address of the next instruction to execute.</li>
+                                    <li>The address from the PC is loaded into the Memory Address Register (MAR).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Step 2: Fetch from Memory:</strong>
+                                <ul>
+                                    <li>The instruction at the address in the MAR is fetched from the code memory and
+                                        loaded into the Memory Buffer Register (MBR).</li>
+
+                                </ul>
+                            </li>
+                            <li><strong>Step 3: Update PC:</strong>
+                                <ul>
+                                    <li>The PC is incremented to point to the next instruction in memory.</li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px; padding: 15px;">2. Decode
+                            Phase:</h5>
+                        <ul class="card-text" style="color: #f8f9fa; font-size: 20px; text-align: justify;">
+                            <li><strong>Step 4: Instruction Register (IR):</strong>
+                                <ul>
+                                    <li>The instruction in the Memory Buffer Register (MBR) is moved to the Instruction
+                                        Register (IR).</li>
+                                    <li>The Control Unit decodes the instruction to identify the operation and operands.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px; padding: 15px;">3.
+                            Execute Phase:</h5>
+                        <ul class="card-text" style="color: #f8f9fa; font-size: 20px; text-align: justify;">
+                            <li><strong>Step 5: Operands Fetch:</strong>
+                                <ul>
+                                    <li>The required operands are fetched depending on the instruction type:</li>
+                                    <ul>
+                                        <li><strong>Register Operand:</strong> Register values (e.g., R1, R2) are
+                                            fetched from the register bank.</li>
+                                        <li><strong>Immediate Operand:</strong> Immediate values (e.g., #5) are directly
+                                            extracted from the instruction.</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li><strong>Step 6: ALU Operation:</strong>
+                                <ul>
+                                    <li>The Arithmetic Logic Unit (ALU) performs the required operation based on the
+                                        instruction:</li>
+                                    <ul>
+                                        <li><strong>ADD:</strong> Adds the values (e.g., R2 + 5) and stores the result
+                                            in the destination register.</li>
+                                        <li><strong>SUB:</strong> Subtracts values (e.g., R4 - 3) and stores the result
+                                            in the destination register.</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li style="padding-bottom: 25px;"><strong>Step 7: Store Result:</strong>
+                                <ul>
+                                    <li>The result of the ALU operation is stored in the destination register or
+                                        accumulator (e.g., RZ).</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
         <!--  -->
         <div class="container d-flex justify-content-center align-items-center mt-5">
             <div class="card mb-3" style="max-width: 1000px; width: 100%; background-color: #311daf; color: white;">
@@ -443,18 +605,24 @@
                             <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
                                 Activity Learnings: </h5>
                             <ul class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
-                                <li>Designed an 8-bit processor using the 3-address format and Immediate addressing mode.</li>
+                                <li>Designed an 8-bit processor using the 3-address format and Immediate addressing
+                                    mode.</li>
                                 <li>Understood how the processor fetches and decodes instructions in a cycle.</li>
-                                <li>Gained insights into the steps involved in executing each instruction, such as fetching, decoding, and executing.</li>
-                                <li>Learned about different addressing modes, specifically how Immediate addressing allows using constant values directly in the instruction.</li>
+                                <li>Gained insights into the steps involved in executing each instruction, such as
+                                    fetching, decoding, and executing.</li>
+                                <li>Learned about different addressing modes, specifically how Immediate addressing
+                                    allows using constant values directly in the instruction.</li>
                             </ul>
                             <h5 class="card-title fw-bold" style="color: #ffcc00; font-size: 25px;padding: 15px;">
                                 Challenges Faced: </h5>
                             <ul class="card-text" style="color: #f8f9fa; font-size: 20px;text-align: justify;">
-                                <li>Handling different instruction formats and ensuring the proper handling of data across registers.</li>
-                                <li>Managing memory efficiently to store and retrieve data while executing instructions.</li>
-                                <li>Debugging issues related to the timing of instruction cycles and ensuring proper synchronization.</li>
-                                
+                                <li>Handling different instruction formats and ensuring the proper handling of data
+                                    across registers.</li>
+                                <li>Managing memory efficiently to store and retrieve data while executing instructions.
+                                </li>
+                                <li>Debugging issues related to the timing of instruction cycles and ensuring proper
+                                    synchronization.</li>
+
                             </ul>
                             </p>
                         </div>
@@ -492,7 +660,8 @@
                         <a class="btn btn-link" href="index.html">Home</a>
                         <a class="btn btn-link" href="Integrated-Course-Activity.html">Integrated-Course-Activity</a>
                         <a class="btn btn-link" href="Processor-Module-Design.html">Processor-Module-Design</a>
-                        <a class="btn btn-link" href="Processor-Module-Integration.html">Processor-Module-Integration</a>
+                        <a class="btn btn-link"
+                            href="Processor-Module-Integration.html">Processor-Module-Integration</a>
                         <a class="btn btn-link" href="course-project.html">Course Project</a>
 
                     </div>
